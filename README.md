@@ -7,8 +7,4 @@ Download the Bash script
 
 And source it in your `.bashrc`
 
-    source ~/.git-powerline.sh
-
-Or (from bash)
-
     echo "source ~/.git-powerline.sh" >> ~/.bash_profile
