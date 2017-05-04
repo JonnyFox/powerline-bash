@@ -1,4 +1,5 @@
 # git-powerline
+
 ## Installation
 
 Download the Bash script
