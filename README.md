@@ -11,4 +11,4 @@ And source it in your `.bashrc`
 
 Or (from bash)
 
-    echo source ~/.bash-powerline.sh >> ~/bash_profile
+    echo "source ~/.bash-powerline.sh" >> ~/.bash_profile
