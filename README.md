@@ -9,4 +9,4 @@ And source it in your `.bashrc`
 
     echo "source ~/.git-powerline.sh" >> ~/.bash_profile
 
-Hey, do not forget to install the provided fonts! ;)
+Hey, do not forget to install the **provided fonts!** ;)
