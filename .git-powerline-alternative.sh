@@ -12,23 +12,22 @@ __powerline() {
     readonly GIT_PULL_SYMBOL='⇩'
     readonly GIT_SEPARATOR=''
 
-    readonly WARN_FG="\[\033[1;33m\]"
-    readonly ALERT_FG="\[\033[0;31m\]"
-    readonly INFO_FG="\[\033[0;34m\]"
-    readonly SUCCESS_FG="\[\033[0;32m\]"
-    readonly COMMON_INV_FG="\[\033[0;30m\]"
-    readonly COMMON_FG="\[\033[1;37m\]"
-    readonly COMMON_LIGHT_FG="\[\033[0;36m\]"
+    readonly WARN_FG="\[$(tput setaf 3)\]"
+    readonly ALERT_FG="\[$(tput setaf 4)\]"
+    readonly INFO_FG="\[$(tput setaf 6)\]"
+    readonly SUCCESS_FG="\[$(tput setaf 2)\]"
+    readonly COMMON_INV_FG="\[$(tput setaf 0)\]"
+    readonly COMMON_FG="\[$(tput setaf 7)\]"
 
-    readonly WARN_BG="\[\033[46m\]"
-    readonly ALERT_BG="\[\033[41m\]"
-    readonly INFO_BG="\[\033[44m\]"
-    readonly SUCCESS_BG="\[\033[46m\]"
-    readonly COMMON_BG="\[\033[40m\]"
+    readonly WARN_BG="\[$(tput setab 3)\]"
+    readonly ALERT_BG="\[$(tput setab 4)\]"
+    readonly INFO_BG="\[$(tput setab 6)\]"
+    readonly SUCCESS_BG="\[$(tput setab 2)\]"
+    readonly COMMON_BG="\[$(tput setab 0)\]"
 
     readonly DIM="\[$(tput dim)\]"
     readonly REVERSE="\[$(tput rev)\]"
-    readonly RESET="\[\033[0m\]"
+    readonly RESET="\[$(tput sgr0)\]"
     readonly BOLD="\[$(tput bold)\]"
 
     if [[ -z "$PS_SYMBOL" ]]; then
@@ -117,12 +116,12 @@ __powerline() {
 
         if shopt -q promptvars; then
 			if [ ${#gitInfo} != 0 ]; then
-					PS1+="$INFO_FG$branchBackColor$GIT_SEPARATOR$branchColor$branchBackColor${gitInfo}$COMMON_LIGHT_FG$consoleBackColor$GIT_SEPARATOR$RESET"
+					PS1+="$branchBackColor$INFO_FG$GIT_SEPARATOR$branchBackColor$COMMON_INV_FG${gitInfo}$consoleBackColor$branchColor$GIT_SEPARATOR$RESET"
 				else
-					PS1+="$INFO_FG$consoleBackColor$GIT_SEPARATOR$RESET"
+					PS1+="$consoleBackColor$INFO_FG$GIT_SEPARATOR$RESET"
 			fi
         else
-            PS1+="$COMMON_FG$ALERT_BG$(gitInfo)$RESET"
+            PS1+="$ALERT_BG$COMMON_FG$(gitInfo)$RESET"
         fi
         PS1+="$consoleBackColor$COMMON_FG $PS_SYMBOL $COMMON_BG$consoleColor$GIT_SEPARATOR$RESET"
 
@@ -130,6 +129,7 @@ __powerline() {
             PS1+=" "
         fi
     }
+
     PROMPT_COMMAND=ps1
 }
 
