@@ -1,5 +1,5 @@
 # git-powerline
-![](/screenshot.png)
+![](https://github.com/JonnyFox/git-powerline/raw/master/screenshot.PNG)
 
 ## Installation
 
