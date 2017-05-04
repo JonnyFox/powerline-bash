@@ -10,6 +10,7 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_PUSH_SYMBOL='⇧'
     readonly GIT_PULL_SYMBOL='⇩'
+    readonly GIT_SEPARATOR=''
 
     readonly WARN_FG="\[$(tput setaf 3)\]"
     readonly ALERT_FG="\[$(tput setaf 4)\]"
@@ -115,14 +116,14 @@ __powerline() {
 
         if shopt -q promptvars; then
 			if [ ${#gitInfo} != 0 ]; then
-					PS1+="$branchBackColor$INFO_FG$branchBackColor$COMMON_INV_FG${gitInfo}$consoleBackColor$branchColor$RESET"
+					PS1+="$branchBackColor$INFO_FG$GIT_SEPARATOR$branchBackColor$COMMON_INV_FG${gitInfo}$consoleBackColor$branchColor$GIT_SEPARATOR$RESET"
 				else
-					PS1+="$consoleBackColor$INFO_FG$RESET"
+					PS1+="$consoleBackColor$INFO_FG$GIT_SEPARATOR$RESET"
 			fi
         else
             PS1+="$ALERT_BG$COMMON_FG$(gitInfo)$RESET"
         fi
-        PS1+="$consoleBackColor$COMMON_FG $PS_SYMBOL $COMMON_BG$consoleColor$RESET"
+        PS1+="$consoleBackColor$COMMON_FG $PS_SYMBOL $COMMON_BG$consoleColor$GIT_SEPARATOR$RESET"
 
         if [ $isError -ne 0 ]; then
             PS1+=" "
