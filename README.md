@@ -1,4 +1,5 @@
 # git-powerline
+![](/screenshot.png)
 
 ## Installation
 
