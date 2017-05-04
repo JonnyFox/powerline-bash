@@ -8,3 +8,7 @@ Download the Bash script
 And source it in your `.bashrc`
 
     source ~/.bash-powerline.sh
+
+Or (from bash)
+
+    echo source ~/.bash-powerline.sh >> ~/bash_profile
