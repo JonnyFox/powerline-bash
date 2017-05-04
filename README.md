@@ -3,12 +3,12 @@
 
 Download the Bash script
 
-    curl https://raw.githubusercontent.com/JonnyFox/git-powerline/master/.bash-powerline.sh > ~/.bash-powerline.sh
+    curl https://raw.githubusercontent.com/JonnyFox/git-powerline/master/.git-powerline.sh > ~/.git-powerline.sh
 
 And source it in your `.bashrc`
 
-    source ~/.bash-powerline.sh
+    source ~/.git-powerline.sh
 
 Or (from bash)
 
-    echo "source ~/.bash-powerline.sh" >> ~/.bash_profile
+    echo "source ~/.git-powerline.sh" >> ~/.bash_profile
