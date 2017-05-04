@@ -1,13 +1,13 @@
-# git-powerline
+# powerline-bash
 A Powerline segment for showing the status of a Git repo in **pure bash language** -> **no Python** or complex installation steps.
 
-![](https://github.com/JonnyFox/git-powerline/raw/master/screenshot.PNG)
+![](https://github.com/JonnyFox/powerline-bash/raw/master/screenshot.PNG)
 
 ## Installation
 
 Download the Bash script
 
-    curl https://raw.githubusercontent.com/JonnyFox/git-powerline/master/.git-powerline.sh > ~/.git-powerline.sh
+    curl https://raw.githubusercontent.com/JonnyFox/powerline-bash/master/.git-powerline.sh > ~/.git-powerline.sh
 
 And source it in your `.bashrc`
 
