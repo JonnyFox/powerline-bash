@@ -1,5 +1,6 @@
 # git-powerline
-A Powerline segment for showing the status of a Git repo (implemented in pure bash language - no need of Python or copmlex installation steps).
+A Powerline segment for showing the status of a Git repo in **pure bash language** -> **no Python** or complex installation steps.
+
 ![](https://github.com/JonnyFox/git-powerline/raw/master/screenshot.PNG)
 
 ## Installation
