@@ -1,4 +1,4 @@
-# powerline-bash
+# Powerline bash
 A Powerline segment for showing the status of a Git repo in **pure bash language -> Neither Python nor complex installation steps thanks!**.
 
 ![](https://github.com/JonnyFox/powerline-bash/raw/master/screenshot.PNG)
