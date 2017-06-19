@@ -13,4 +13,4 @@ And source it in your `.bashrc`
 
     echo "source ~/.powerline-bash.sh" >> ~/.bash_profile
 
-Hey, do not forget to install the **provided font!** or [the one that you prefer](https://github.com/powerline/fonts) ;)
+Hey, do not forget to install the **provided font!** Or [the one that you prefer](https://github.com/powerline/fonts) ;)
